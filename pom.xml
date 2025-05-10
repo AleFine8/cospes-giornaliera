@@ -55,10 +55,40 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-data-jpa</artifactId>
+	</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>hibernate3-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<components>
+						<component>
+							<name>hbm2java</name>
+							<outputDirectory>${project.basedir}/src/main/java/org.cospessardegna.entities</outputDirectory>
+						</component>
+					</components>
+					<componentProperties>
+						<packagename>org.cospessardegna.giornaliera.entities</packagename>
+						<revengfile>${project.basedir}/src/main/resources/hibernate.reveng.xml</revengfile>
+						<detectManyToMany>true</detectManyToMany>
+						<detectOneToOne>true</detectOneToOne>
+					</componentProperties>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>8.0.33</version>
+					</dependency>
+				</dependencies>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
