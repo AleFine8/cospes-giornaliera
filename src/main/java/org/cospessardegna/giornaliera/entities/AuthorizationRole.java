@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class AuthorizationRole {
 
     @Id
-    @Column(name = "role_id")
+    @Column(name = "id")
     private Integer id;
 
     @Id

@@ -10,10 +10,10 @@ import jakarta.persistence.Table;
 public class ActivityType {
 
     @Id
-    @Column(name = "act_id")
+    @Column(name = "id")
     private Integer id;
 
-    @Column(name = "desc", length = 100)
-    private String desc;
+    @Column(name = "description", length = 100)
+    private String description;
 
 }

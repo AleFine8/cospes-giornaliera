@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 public class CostCenterStatus {
 
     @Id
-    @Column(name = "statuscc_id") //toDo: rimuovere autoIncrement dal db
+    @Column(name = "id") //toDo: rimuovere autoIncrement dal db
     private Integer id;
 
     @Column(name = "description", length = 100)

@@ -9,8 +9,8 @@ public class CostCenter {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "cost_id")
-    private Integer Id;
+    @Column(name = "id")
+    private Integer id;
 
     @Column(name = "cost_center_name", nullable = false, length = 100)
     private String costCenterName;

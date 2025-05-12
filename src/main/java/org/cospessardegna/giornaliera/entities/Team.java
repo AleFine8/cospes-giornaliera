@@ -7,8 +7,9 @@ public class Team {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
 
-    @Column(name = "desc", nullable = false, length = 500)
+    @Column(name = "description", nullable = false, length = 500)
     private String description;
 }

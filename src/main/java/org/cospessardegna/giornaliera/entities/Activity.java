@@ -10,10 +10,11 @@ public class Activity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "id")
     private Integer id;
 
     //associa l'attributo description alla colonna 'desc' della nostra tabella
-    @Column(name = "desc", nullable = false, length = 500)
+    @Column(name = "description", nullable = false, length = 500)
     private String description;
 
     @Column(name = "type_id")

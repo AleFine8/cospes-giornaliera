@@ -9,10 +9,10 @@ import jakarta.persistence.Table;
 public class ActivityStatus {
 
     @Id
-    @Column(name = "statid")
+    @Column(name = "id")
     private Integer id;
 
-    @Column(name = "desc", length = 100)
+    @Column(name = "description", length = 100)
     private String description;
 
 }

@@ -10,6 +10,6 @@ public class CustomerCategory {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "desc", length = 100)
-    private String desc;
+    @Column(name = "description", length = 100)
+    private String description;
 }
