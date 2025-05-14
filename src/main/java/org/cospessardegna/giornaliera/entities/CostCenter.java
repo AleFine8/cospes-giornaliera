@@ -15,7 +15,7 @@ public class CostCenter {
     @Column(name = "cost_center_name", nullable = false, length = 100)
     private String costCenterName;
 
-    @Column(name = "desc", length = 100)
+    @Column(name = "description", length = 100)
     private String description;
 
     @Column(name = "status_id")
@@ -34,7 +34,7 @@ public class CostCenter {
     private LocalDateTime creationDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "status_id", nullable = false )
+    @JoinColumn(name = "status_id", insertable = false, updatable = false )
     private CostCenterStatus status;
 
 }

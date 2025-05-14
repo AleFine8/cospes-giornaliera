@@ -14,6 +14,6 @@ public class UserTeam {
 
     @Id
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "team_id", nullable = false)
+    @JoinColumn(name = "team_id", insertable = false,updatable = false)
     private Team team;
 }

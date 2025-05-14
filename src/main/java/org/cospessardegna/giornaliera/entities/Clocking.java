@@ -19,11 +19,11 @@ public class Clocking {
     @Column(name = "clocking_time", nullable = false)
     private LocalDateTime clockingTime;
 
-    @Column(name = "userId")
+    @Column(name = "user_id")
     private Integer userId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false, updatable = false )
+    @JoinColumn(name = "user_id", updatable = false, insertable = false )
     private User user;
 
 }

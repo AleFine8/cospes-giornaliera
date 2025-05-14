@@ -13,7 +13,7 @@ public class CostCenterTeam {
 
     @Id
     @Column(name = "team_id")
-    private Integer id;
+    private Integer teamId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "team_id", insertable = false, updatable = false)

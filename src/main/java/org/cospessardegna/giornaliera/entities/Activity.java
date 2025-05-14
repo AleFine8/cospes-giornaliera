@@ -37,15 +37,15 @@ public class Activity{
 
     //modo per fare le chiavi esterne
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "type_id", nullable = false )
+    @JoinColumn(name = "type_id", insertable = false, updatable = false )
     private ActivityType type;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "status_id", nullable = false)
+    @JoinColumn(name = "status_id", insertable = false,updatable = false)
     private ActivityStatus status;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @Column(name = "cost_center_id")
+    @JoinColumn(name = "cost_center_id",insertable = false,updatable = false)
     private CostCenter costCenter;
 
 }

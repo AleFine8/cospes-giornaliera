@@ -9,11 +9,11 @@ public class ShiftUser {
 
     @Id
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "shift_id", nullable = false)
+    @JoinColumn(name = "shift_id", insertable = false,updatable = false)
     private Shift shift;
 
     @Id
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id", insertable = false,updatable = false)
     private User user;
 }

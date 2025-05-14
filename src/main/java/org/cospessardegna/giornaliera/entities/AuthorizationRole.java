@@ -7,8 +7,8 @@ import jakarta.persistence.*;
 public class AuthorizationRole {
 
     @Id
-    @Column(name = "id")
-    private Integer id;
+    @Column(name = "role_id")
+    private Integer roleId;
 
     @Id
     @Column(name = "app_entity_id", nullable = false)
@@ -19,15 +19,15 @@ public class AuthorizationRole {
     private Integer permissionId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "role_id", nullable = false )
+    @JoinColumn(name = "role_id", insertable = false,updatable = false )
     private Role role;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "app_entity_id", nullable = false )
+    @JoinColumn(name = "app_entity_id", insertable = false,updatable = false )
     private ApplicationEntity appEntity;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "permission_id", nullable = false )
+    @JoinColumn(name = "permission_id", insertable = false,updatable = false )
     private Permission permission;
 
 }

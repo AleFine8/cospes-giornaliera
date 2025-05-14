@@ -13,7 +13,7 @@ public class User {
     private Integer id;
 
     @Column(name = "first_name", length = 100)
-    private String fistName;
+    private String firstName;
 
     @Column(name = "last_name", length = 100)
     private String lastName;
@@ -40,4 +40,83 @@ public class User {
     @JoinColumn(name = "role_id", insertable = false, updatable = false)
     private Role role;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getFiscalCode() {
+        return fiscalCode;
+    }
+
+    public void setFiscalCode(String fiscalCode) {
+        this.fiscalCode = fiscalCode;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public Integer getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Integer roleId) {
+        this.roleId = roleId;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public boolean isPrivacyConsent() {
+        return privacyConsent;
+    }
+
+    public void setPrivacyConsent(boolean privacyConsent) {
+        this.privacyConsent = privacyConsent;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 }

@@ -16,11 +16,11 @@ public class CustomerCostCenter {
     private Integer customerId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cost_center_id")
+    @JoinColumn(name = "cost_center_id", insertable = false,updatable = false)
     private CostCenter costCenter;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "customer_id" )
+    @JoinColumn(name = "customer_id", insertable = false,updatable = false )
     private Customer customer;
 
 }
