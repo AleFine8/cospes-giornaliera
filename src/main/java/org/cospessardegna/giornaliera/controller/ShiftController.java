@@ -36,4 +36,5 @@ public class ShiftController {
     public void deleteById(@PathVariable Integer id){
         shiftService.deleteById(id);
     }
+
 }
